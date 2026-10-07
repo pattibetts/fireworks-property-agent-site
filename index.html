@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fireworks Property Agent</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #b4532a;
+    --border: #e4e0da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15120f;
+      --fg: #f1ece4;
+      --muted: #b8ada0;
+      --accent: #e8976a;
+      --border: #332c24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+  .tagline {
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+  }
+  p { color: var(--fg); }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.4rem; }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 2rem;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Fireworks Property Agent</h1>
+  <p class="tagline">A personal automation that turns booking-confirmation emails into a tidy reservation calendar.</p>
+
+  <p>
+    This project watches one person's Gmail inbox for booking confirmation
+    emails from a handful of home-exchange and hospitality platforms
+    (Kindred, HomeExchange, People Like Us), extracts the guest, dates,
+    and status, and logs each booking as a row in a private Google Sheet.
+  </p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Reads new, unlabeled booking emails in one Gmail inbox</li>
+    <li>Labels each email "Processed" once it's been recorded</li>
+    <li>Extracts structured booking details using an AI model</li>
+    <li>Writes the result to a Google Sheet only the owner can access</li>
+  </ul>
+
+  <div class="card">
+    <strong>Privacy</strong>
+    <p style="margin-bottom:0">
+      See the <a href="privacy.html">Privacy Policy</a> for details on what
+      this app accesses and how that data is used.
+    </p>
+  </div>
+
+  <footer>
+    Source code: <a href="https://github.com/pattibetts/repo">github.com/pattibetts/repo</a>
+  </footer>
+</main>
+</body>
+</html>

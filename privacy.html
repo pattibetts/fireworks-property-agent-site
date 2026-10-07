@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Fireworks Property Agent</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #b4532a;
+    --border: #e4e0da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15120f;
+      --fg: #f1ece4;
+      --muted: #b8ada0;
+      --accent: #e8976a;
+      --border: #332c24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  .updated { color: var(--muted); margin-top: 0; margin-bottom: 2.5rem; font-size: 0.9rem; }
+  h2 { font-size: 1.05rem; margin-top: 2.25rem; }
+  p { color: var(--fg); }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: var(--accent); }
+  .back { display: inline-block; margin-bottom: 2rem; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="index.html">&larr; Back</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated October 7, 2026</p>
+
+  <p>
+    Fireworks Property Agent is a personal automation built and run by a
+    single individual for their own use. It is not a public product, and it
+    does not act on behalf of, or have access to, any Gmail account other
+    than the owner's own.
+  </p>
+
+  <h2>What it accesses</h2>
+  <p>This app connects to one Gmail inbox, belonging to its owner, and:</p>
+  <ul>
+    <li>Reads booking-confirmation emails from a small, fixed list of senders</li>
+    <li>Applies a Gmail label ("Processed") to emails it has already read</li>
+  </ul>
+  <p>It does not read, modify, or delete any other email in the inbox, and it never sends email on the owner's behalf.</p>
+
+  <h2>What it does with that data</h2>
+  <p>
+    Guest name, dates, and booking status extracted from each email are
+    written to a single Google Sheet that only the owner can access. No
+    other storage, logging, or analytics system receives this data.
+  </p>
+
+  <h2>What it shares</h2>
+  <p>
+    This app shares no data with any third party. The only outside services
+    it talks to are the ones strictly required to do the above: Google's
+    APIs (Gmail, Sheets) and an AI inference API (Fireworks AI) used solely
+    to parse the structured booking fields out of an email's text.
+  </p>
+
+  <h2>Data retention and deletion</h2>
+  <p>
+    Data persists only as long as the owner's own Gmail labels and Google
+    Sheet exist. Since the owner and the data subject are the same person,
+    data can be deleted at any time by editing or deleting the Sheet, or by
+    revoking this app's access from
+    <a href="https://myaccount.google.com/permissions">Google Account permissions</a>.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy can be raised via the project's
+    <a href="https://github.com/pattibetts/repo">GitHub repository</a>.
+  </p>
+
+  <footer>
+    <a href="index.html">&larr; Back to Fireworks Property Agent</a>
+  </footer>
+</main>
+</body>
+</html>
